@@ -1,0 +1,26 @@
+/**
+ * Created by Justin on 9/2/16.
+ */
+"use strict";
+/// <reference path="../interfaces/extensions/Node.d.ts" />
+const mongoose = require('mongoose');
+const environment_1 = require('./environment');
+const MONGO = environment_1.CONFIG.mongoDb;
+/**
+ * Configure Mongoose and connect to MongoDb
+ * @returns {"mongoose"._mongoose.MongooseThenable}
+ * @constructor
+ */
+function MongoConfig() {
+    // Plug in native ES6 Promise in place of Mongoose's mPromise
+    mongoose.Promise = Promise;
+    return mongoose.connect(MONGO.uri, { auth: MONGO.auth }, (err) => {
+        if (err) {
+            return global.$log.error('Uh oh! There are troubles in Database Land: ', err);
+        }
+        return global.$log.info('MongoDb successfully connected!');
+    });
+}
+exports.MongoConfig = MongoConfig;
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbmZpZy9tb25nb2RiLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOztHQUVHOztBQUVILDJEQUEyRDtBQUUzRCxNQUFPLFFBQVEsV0FBVyxVQUFVLENBQUMsQ0FBQztBQUN0Qyw4QkFBdUIsZUFDdkIsQ0FBQyxDQURxQztBQUN0QyxNQUFNLEtBQUssR0FBRyxvQkFBTSxDQUFDLE9BQU8sQ0FBQztBQUU3Qjs7OztHQUlHO0FBQ0g7SUFFQyw2REFBNkQ7SUFDN0QsUUFBUSxDQUFDLE9BQU8sR0FBRyxPQUFPLENBQUM7SUFFM0IsTUFBTSxDQUFDLFFBQVEsQ0FBQyxPQUFPLENBQUMsS0FBSyxDQUFDLEdBQUcsRUFBRSxFQUFFLElBQUksRUFBRSxLQUFLLENBQUMsSUFBSSxFQUFFLEVBQUUsQ0FBQyxHQUFPO1FBRWhFLEVBQUUsQ0FBQyxDQUFDLEdBQUcsQ0FBQyxDQUNSLENBQUM7WUFDQSxNQUFNLENBQUMsTUFBTSxDQUFDLElBQUksQ0FBQyxLQUFLLENBQUMsOENBQThDLEVBQUUsR0FBRyxDQUFDLENBQUM7UUFDL0UsQ0FBQztRQUVELE1BQU0sQ0FBQyxNQUFNLENBQUMsSUFBSSxDQUFDLElBQUksQ0FBQyxpQ0FBaUMsQ0FBQyxDQUFDO0lBQzVELENBQUMsQ0FBQyxDQUFDO0FBQ0osQ0FBQztBQWRlLG1CQUFXLGNBYzFCLENBQUEiLCJmaWxlIjoiY29uZmlnL21vbmdvZGIuanMiLCJzb3VyY2VzQ29udGVudCI6WyIvKipcbiAqIENyZWF0ZWQgYnkgSnVzdGluIG9uIDkvMi8xNi5cbiAqL1xuXG4vLy8gPHJlZmVyZW5jZSBwYXRoPVwiLi4vaW50ZXJmYWNlcy9leHRlbnNpb25zL05vZGUuZC50c1wiIC8+XG5cbmltcG9ydCBtb25nb29zZSA9IHJlcXVpcmUoJ21vbmdvb3NlJyk7XG5pbXBvcnQgeyBDT05GSUcgfSBmcm9tICcuL2Vudmlyb25tZW50J1xuY29uc3QgTU9OR08gPSBDT05GSUcubW9uZ29EYjtcblxuLyoqXG4gKiBDb25maWd1cmUgTW9uZ29vc2UgYW5kIGNvbm5lY3QgdG8gTW9uZ29EYlxuICogQHJldHVybnMge1wibW9uZ29vc2VcIi5fbW9uZ29vc2UuTW9uZ29vc2VUaGVuYWJsZX1cbiAqIEBjb25zdHJ1Y3RvclxuICovXG5leHBvcnQgZnVuY3Rpb24gTW9uZ29Db25maWcoKTptb25nb29zZS5Nb25nb29zZVxue1xuXHQvLyBQbHVnIGluIG5hdGl2ZSBFUzYgUHJvbWlzZSBpbiBwbGFjZSBvZiBNb25nb29zZSdzIG1Qcm9taXNlXG5cdG1vbmdvb3NlLlByb21pc2UgPSBQcm9taXNlO1xuXG5cdHJldHVybiBtb25nb29zZS5jb25uZWN0KE1PTkdPLnVyaSwgeyBhdXRoOiBNT05HTy5hdXRoIH0sIChlcnI6YW55KSA9PlxuXHR7XG5cdFx0aWYgKGVycilcblx0XHR7XG5cdFx0XHRyZXR1cm4gZ2xvYmFsLiRsb2cuZXJyb3IoJ1VoIG9oISBUaGVyZSBhcmUgdHJvdWJsZXMgaW4gRGF0YWJhc2UgTGFuZDogJywgZXJyKTtcblx0XHR9XG5cblx0XHRyZXR1cm4gZ2xvYmFsLiRsb2cuaW5mbygnTW9uZ29EYiBzdWNjZXNzZnVsbHkgY29ubmVjdGVkIScpO1xuXHR9KTtcbn1cbiJdLCJzb3VyY2VSb290IjoiL3NvdXJjZS8ifQ==

@@ -1,0 +1,10 @@
+/**
+ * Created by Justin on 9/2/16.
+ */
+"use strict";
+// TODO: any file that imports from @angular will cause compile-time errors without this - why???
+/// <reference path="../../../../node_modules/typescript/lib/lib.es6.d.ts" />
+var platform_browser_1 = require('@angular/platform-browser');
+exports.SERVICES = [platform_browser_1.Title];
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC9zZXJ2aWNlcy9pbmRleC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7R0FFRzs7QUFFSCxpR0FBaUc7QUFDakcsNkVBQTZFO0FBRTdFLGlDQUFzQiwyQkFFdEIsQ0FBQyxDQUZnRDtBQUVwQyxnQkFBUSxHQUFHLENBQUUsd0JBQUssQ0FBRSxDQUFDIiwiZmlsZSI6ImFwcC9zZXJ2aWNlcy9pbmRleC5qcyIsInNvdXJjZXNDb250ZW50IjpbIi8qKlxuICogQ3JlYXRlZCBieSBKdXN0aW4gb24gOS8yLzE2LlxuICovXG5cbi8vIFRPRE86IGFueSBmaWxlIHRoYXQgaW1wb3J0cyBmcm9tIEBhbmd1bGFyIHdpbGwgY2F1c2UgY29tcGlsZS10aW1lIGVycm9ycyB3aXRob3V0IHRoaXMgLSB3aHk/Pz9cbi8vLyA8cmVmZXJlbmNlIHBhdGg9XCIuLi8uLi8uLi8uLi9ub2RlX21vZHVsZXMvdHlwZXNjcmlwdC9saWIvbGliLmVzNi5kLnRzXCIgLz5cblxuaW1wb3J0IHsgVGl0bGUgfSBmcm9tICdAYW5ndWxhci9wbGF0Zm9ybS1icm93c2VyJ1xuXG5leHBvcnQgY29uc3QgU0VSVklDRVMgPSBbIFRpdGxlIF07XG4iXSwic291cmNlUm9vdCI6Ii9zb3VyY2UvIn0=

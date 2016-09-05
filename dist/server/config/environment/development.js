@@ -1,0 +1,27 @@
+/**
+ * Created by Justin on 9/2/16.
+ */
+"use strict";
+/// <reference path="../../../../typings/index.d.ts" />
+let path = require('path');
+module.exports = {
+    name: 'development',
+    env: process.env.NODE_ENV || 'development',
+    // Host
+    host: process.env.HOST || 'localhost',
+    // Server port
+    port: process.env.PORT || 3000,
+    // Server IP
+    ip: process.env.IP || '127.0.0.1',
+    mongoDb: {
+        user: '',
+        pass: '',
+        host: '',
+        port: 27017,
+        db: 'MeanSeed-dev',
+        auth: {},
+        uri: 'mongodb://localhost/MeanSeed-dev'
+    }
+};
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbmZpZy9lbnZpcm9ubWVudC9kZXZlbG9wbWVudC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7R0FFRzs7QUFFSCx1REFBdUQ7QUFFdkQsSUFBSSxJQUFJLEdBQUcsT0FBTyxDQUFDLE1BQU0sQ0FBQyxDQUFDO0FBSzNCLGlCQUFTO0lBQ1IsSUFBSSxFQUFFLGFBQWE7SUFDbkIsR0FBRyxFQUFFLE9BQU8sQ0FBQyxHQUFHLENBQUMsUUFBUSxJQUFJLGFBQWE7SUFFMUMsT0FBTztJQUNQLElBQUksRUFBRSxPQUFPLENBQUMsR0FBRyxDQUFDLElBQUksSUFBSSxXQUFXO0lBRXJDLGNBQWM7SUFDZCxJQUFJLEVBQUUsT0FBTyxDQUFDLEdBQUcsQ0FBQyxJQUFJLElBQUksSUFBSTtJQUU5QixZQUFZO0lBQ1osRUFBRSxFQUFFLE9BQU8sQ0FBQyxHQUFHLENBQUMsRUFBRSxJQUFJLFdBQVc7SUFFakMsT0FBTyxFQUFFO1FBQ1IsSUFBSSxFQUFFLEVBQUU7UUFDUixJQUFJLEVBQUUsRUFBRTtRQUNSLElBQUksRUFBRSxFQUFFO1FBQ1IsSUFBSSxFQUFFLEtBQUs7UUFDWCxFQUFFLEVBQUUsY0FBYztRQUNsQixJQUFJLEVBQUUsRUFBRTtRQUNSLEdBQUcsRUFBRSxrQ0FBa0M7S0FDdkM7Q0FDRCxDQUFBIiwiZmlsZSI6ImNvbmZpZy9lbnZpcm9ubWVudC9kZXZlbG9wbWVudC5qcyIsInNvdXJjZXNDb250ZW50IjpbIi8qKlxuICogQ3JlYXRlZCBieSBKdXN0aW4gb24gOS8yLzE2LlxuICovXG5cbi8vLyA8cmVmZXJlbmNlIHBhdGg9XCIuLi8uLi8uLi8uLi90eXBpbmdzL2luZGV4LmQudHNcIiAvPlxuXG5sZXQgcGF0aCA9IHJlcXVpcmUoJ3BhdGgnKTtcblxuLyoqXG4gKiBEZXZlbG9wbWVudCBlbnZpcm9ubWVudCBzZXR0aW5nc1xuICovXG5leHBvcnQgPSB7XG5cdG5hbWU6ICdkZXZlbG9wbWVudCcsXG5cdGVudjogcHJvY2Vzcy5lbnYuTk9ERV9FTlYgfHwgJ2RldmVsb3BtZW50JyxcblxuXHQvLyBIb3N0XG5cdGhvc3Q6IHByb2Nlc3MuZW52LkhPU1QgfHwgJ2xvY2FsaG9zdCcsXG5cblx0Ly8gU2VydmVyIHBvcnRcblx0cG9ydDogcHJvY2Vzcy5lbnYuUE9SVCB8fCAzMDAwLFxuXG5cdC8vIFNlcnZlciBJUFxuXHRpcDogcHJvY2Vzcy5lbnYuSVAgfHwgJzEyNy4wLjAuMScsXG5cblx0bW9uZ29EYjoge1xuXHRcdHVzZXI6ICcnLFxuXHRcdHBhc3M6ICcnLFxuXHRcdGhvc3Q6ICcnLFxuXHRcdHBvcnQ6IDI3MDE3LFxuXHRcdGRiOiAnTWVhblNlZWQtZGV2Jyxcblx0XHRhdXRoOiB7fSxcblx0XHR1cmk6ICdtb25nb2RiOi8vbG9jYWxob3N0L01lYW5TZWVkLWRldidcblx0fVxufVxuIl0sInNvdXJjZVJvb3QiOiIvc291cmNlLyJ9

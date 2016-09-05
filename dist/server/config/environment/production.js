@@ -1,0 +1,7 @@
+/**
+ * Created by Justin on 9/2/16.
+ */
+"use strict";
+module.exports = {};
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbmZpZy9lbnZpcm9ubWVudC9wcm9kdWN0aW9uLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOztHQUVHOztBQUVILGlCQUFTLEVBRVIsQ0FBQSIsImZpbGUiOiJjb25maWcvZW52aXJvbm1lbnQvcHJvZHVjdGlvbi5qcyIsInNvdXJjZXNDb250ZW50IjpbIi8qKlxuICogQ3JlYXRlZCBieSBKdXN0aW4gb24gOS8yLzE2LlxuICovXG5cbmV4cG9ydCA9IHtcblxufVxuIl0sInNvdXJjZVJvb3QiOiIvc291cmNlLyJ9

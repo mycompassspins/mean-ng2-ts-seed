@@ -1,0 +1,12 @@
+/**
+ * Created by Justin on 9/2/16.
+ */
+"use strict";
+var components_1 = require('../components');
+var router_1 = require('@angular/router');
+var routes = [
+    { path: '', component: components_1.HomeComponent }
+];
+exports.ROUTES = router_1.RouterModule.forRoot(routes);
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC9jb25maWcvUm91dGVzLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOztHQUVHOztBQUVILDJCQUE4QixlQUM5QixDQUFDLENBRDRDO0FBQzdDLHVCQUFxQyxpQkFFckMsQ0FBQyxDQUZxRDtBQUV0RCxJQUFNLE1BQU0sR0FBVTtJQUNyQixFQUFFLElBQUksRUFBRSxFQUFFLEVBQUUsU0FBUyxFQUFFLDBCQUFhLEVBQUU7Q0FDdEMsQ0FBQztBQUVXLGNBQU0sR0FBRyxxQkFBWSxDQUFDLE9BQU8sQ0FBQyxNQUFNLENBQUMsQ0FBQyIsImZpbGUiOiJhcHAvY29uZmlnL1JvdXRlcy5qcyIsInNvdXJjZXNDb250ZW50IjpbIi8qKlxuICogQ3JlYXRlZCBieSBKdXN0aW4gb24gOS8yLzE2LlxuICovXG5cbmltcG9ydCB7IEhvbWVDb21wb25lbnQgfSBmcm9tICcuLi9jb21wb25lbnRzJ1xuaW1wb3J0IHsgUm91dGVzLCBSb3V0ZXJNb2R1bGUgfSBmcm9tICdAYW5ndWxhci9yb3V0ZXInXG5cbmNvbnN0IHJvdXRlczpSb3V0ZXMgPSBbXG5cdHsgcGF0aDogJycsIGNvbXBvbmVudDogSG9tZUNvbXBvbmVudCB9XG5dO1xuXG5leHBvcnQgY29uc3QgUk9VVEVTID0gUm91dGVyTW9kdWxlLmZvclJvb3Qocm91dGVzKTtcbiJdLCJzb3VyY2VSb290IjoiL3NvdXJjZS8ifQ==
