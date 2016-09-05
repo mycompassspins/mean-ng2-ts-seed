@@ -14,7 +14,7 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/mycompassspins/mean-ng2-ts-seed"
   },
   "dependencies": {
     "@angular/common": "2.0.0-rc.5",
