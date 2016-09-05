@@ -71,7 +71,7 @@ Install typings
 
 `typings install`
 
-You can use the project's development config file (`/src/config/environment/development.ts`), which a local MongoDb (MeanSeed-dev), or you can use a local configuration by adding `/src/config/environment/local.ts` and the property `use: true`
+You can use the project's development config file (`/src/config/environment/development.ts`), which uses a local MongoDb (MeanSeed-dev), or you can use a local configuration by adding `/src/config/environment/local.ts` and the property `use: true`
 
 `gulp serve`
 
