@@ -1,7 +1,7 @@
 # MEANg2 Seed Project
 
 [![Build Status](https://travis-ci.org/mycompassspins/mean-ng2-ts-seed.svg?branch=master)](https://travis-ci.org/mycompassspins/mean-ng2-ts-seed)
-[![Coverage Status](https://coveralls.io/repos/github/mycompassspins/mean-ng2-ts-seed/badge.svg?branch=master)](https://coveralls.io/github/mycompassspins/mean-ng2-ts-seed?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/mycompassspins/mean-ng2-ts-seed/badge.svg)](https://coveralls.io/github/mycompassspins/mean-ng2-ts-seed)
 [![TypeScript](https://badges.frapsoft.com/typescript/version/typescript-v18.svg?v=101)](https://github.com/ellerbrock/typescript-badges/)
 [![npm Version](https://img.shields.io/badge/npm-3.9.5-blue.svg)](https://img.shields.io/badge/npm-3.9.5-blue.svg)
 [![Node Version](https://img.shields.io/badge/node-6.2.2-blue.svg)](https://img.shields.io/badge/node-6.2.2-blue.svg)
