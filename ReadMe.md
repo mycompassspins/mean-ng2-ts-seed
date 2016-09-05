@@ -1,4 +1,4 @@
-# express-decorate
+# MEANg2 Seed Project
 
 [![Build Status](https://travis-ci.org/mycompassspins/mean-ng2-ts-seed.svg?branch=master)](https://travis-ci.org/mycompassspins/mean-ng2-ts-seed)
 [![Coverage Status](https://coveralls.io/repos/github/mycompassspins/mean-ng2-ts-seed/badge.svg?branch=master)](https://coveralls.io/github/mycompassspins/mean-ng2-ts-seed?branch=master)
