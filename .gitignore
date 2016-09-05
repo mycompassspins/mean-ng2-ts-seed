@@ -5,3 +5,5 @@ typings
 .DS_Store
 src/server/config/environment/local.ts
 src/client/bower_components
+npm-debug.log
+coverage
