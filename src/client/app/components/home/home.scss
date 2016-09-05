@@ -1,0 +1,19 @@
+#home {
+
+	.container {
+
+		.img-thumbnail {
+			text-align: center;
+			width:376px; max-width:30%;
+			display:inline-block;
+
+			a {
+				display: block;
+
+				h3 {
+					margin: 0;
+				}
+			}
+		}
+	}
+}

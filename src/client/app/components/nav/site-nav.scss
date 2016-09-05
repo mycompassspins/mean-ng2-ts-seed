@@ -1,0 +1,21 @@
+#site-nav.navbar.navbar-fixed-top {
+	z-index: 9999;
+
+	.navbar-header {
+
+		img { height: 40px; margin-top: -10px; }
+		img, small { display: inline-block }
+		a { font-size: 22px; }
+	}
+}
+
+@media (max-width: 768px) {
+	#site-nav.navbar.navbar-fixed-top {
+		ul {
+			width: 100%;
+			padding: 0;
+			margin: 0 auto;
+			text-align: center;
+		}
+	}
+}

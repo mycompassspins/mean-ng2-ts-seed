@@ -1,0 +1,29 @@
+// Bootstrap
+$icon-font-path: '../bower_components/bootstrap-sass/assets/fonts/bootstrap/' !default;
+@import '../../client/bower_components/bootstrap-sass/assets/stylesheets/bootstrap';
+
+// Font-Awesome
+$fa-font-path: '../bower_components/font-awesome/fonts' !default;
+@import '../../client/bower_components/font-awesome/scss/font-awesome';
+
+// Global Styles
+
+.fade-in {
+	animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+#main {
+	margin: 70px auto;
+}
+
+// Gulp - inject SASS import files
+// inject:sassImports
+@import 'components/home/home';
+@import 'components/loading/loading';
+@import 'components/nav/site-nav';
+// endinject

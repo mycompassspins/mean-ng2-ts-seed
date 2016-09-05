@@ -1,0 +1,21 @@
+{
+  "name": "aallab",
+  "description": "Angular client application for controlling network-capable devices",
+  "main": "dist",
+  "authors": [
+    "Synap.io"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "./src/client/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "^3.3.6",
+    "font-awesome": "^4.6.3"
+  }
+}
