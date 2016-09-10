@@ -93,7 +93,7 @@ export class Application
 	{
 		this.server.close(() =>
 		{
-			global.$log.warn('Stopping Express Server . . .');
+			console.warn('Stopping Express Server . . .');
 
 			// Right now the only thing calling app.Stop() is our specs
 			// Give the specs plenty of time to complete before killing the process

@@ -10,4 +10,4 @@ import { HomeComponent } from './home/HomeComponent'
 import { ComponentLoading } from './loading/ComponentLoading'
 
 export { NavComponent, HomeComponent, ComponentLoading }
-export const COMPONENTS = [ NavComponent, HomeComponent ];
+export const COMPONENTS = [ NavComponent, HomeComponent, ComponentLoading ];

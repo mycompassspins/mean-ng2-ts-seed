@@ -31,14 +31,17 @@ describe('Application', () =>
 		done();
 	});
 
-	it('should have set global Console and LogBug properties', (done:Function) =>
+	it('should have set global $log and LogBug properties', (done:Function) =>
 	{
 		let gConsole = global.$log,
 			logBug = global.LogBug,
 			hasMethods:boolean = typeof(gConsole.info) &&
 				typeof(gConsole.warn) &&
 				typeof(gConsole.debug) &&
-				typeof(gConsole.trace) === 'function';
+				typeof(gConsole.trace) &&
+				typeof(gConsole.error) === 'function';
+
+		console.log(typeof(gConsole));
 
 		expect(gConsole).toBeDefined();
 		expect(hasMethods).toBe(true);

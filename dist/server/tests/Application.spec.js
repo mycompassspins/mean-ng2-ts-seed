@@ -21,11 +21,13 @@ describe('Application', () => {
         expect(typeof _1.app.Get && typeof _1.app.Set).toEqual('function');
         done();
     });
-    it('should have set global Console and LogBug properties', (done) => {
+    it('should have set global $log and LogBug properties', (done) => {
         let gConsole = global.$log, logBug = global.LogBug, hasMethods = typeof (gConsole.info) &&
             typeof (gConsole.warn) &&
             typeof (gConsole.debug) &&
-            typeof (gConsole.trace) === 'function';
+            typeof (gConsole.trace) &&
+            typeof (gConsole.error) === 'function';
+        console.log(typeof (gConsole));
         expect(gConsole).toBeDefined();
         expect(hasMethods).toBe(true);
         expect(logBug).toBeDefined();

@@ -9,5 +9,8 @@
 		"removeComments": false,
 		"noImplicitAny": true
 	},
+	"angularCompilerOptions": {
+		"genDir": "./ngfactory"
+	},
 	"files": []
 }

@@ -4,11 +4,7 @@
 
 /// <reference path="../../interfaces/extensions/Node.d.ts" />
 
-// $log exists on NodeJs.Global, but our GlobalConfig may not have been called yet
-// Instantiate Logger here so we can use it
-// TODO: ensure GlobalConfig() fires before this file is imported
-import { Logger } from 'ts-log-debug'
-const $log = new Logger();
+import { $log } from '../../helpers/Logger'
 
 /**
  * This file exports environment configurations based on process.env.NODE_ENV

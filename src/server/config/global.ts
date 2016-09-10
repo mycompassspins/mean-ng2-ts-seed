@@ -3,8 +3,8 @@
  */
 
 import { app } from '../'
-import { $log } from 'ts-log-debug'
 import { BugLogger } from '../error-handling'
+import { $log } from '../helpers/Logger'
 let path = require('path');
 
 /**

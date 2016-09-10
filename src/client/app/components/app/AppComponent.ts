@@ -2,7 +2,7 @@
  * Created by Justin on 9/2/16.
  */
 
-import { Component } from '@angular/core';
+import { Component } from '@angular/core'
 
 @Component({
     selector: 'application',
@@ -10,7 +10,6 @@ import { Component } from '@angular/core';
 		<div id="main" class="fade-in">
 			<site-nav></site-nav>
 			<router-outlet></router-outlet>
-			<site-footer></site-footer>
 		</div>
 	`
 })

@@ -2,14 +2,14 @@
 
 [![Build Status](https://travis-ci.org/mycompassspins/mean-ng2-ts-seed.svg?branch=master)](https://travis-ci.org/mycompassspins/mean-ng2-ts-seed)
 [![Coverage Status](https://coveralls.io/repos/github/mycompassspins/mean-ng2-ts-seed/badge.svg)](https://coveralls.io/github/mycompassspins/mean-ng2-ts-seed)
-[![TypeScript](https://badges.frapsoft.com/typescript/version/typescript-v18.svg?v=101)](https://github.com/ellerbrock/typescript-badges/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-v2.0-blue.svg)](https://img.shields.io/badge/TypeScript-v2.0-blue.svg)
 [![npm Version](https://img.shields.io/badge/npm-3.9.5-blue.svg)](https://img.shields.io/badge/npm-3.9.5-blue.svg)
 [![Node Version](https://img.shields.io/badge/node-6.2.2-blue.svg)](https://img.shields.io/badge/node-6.2.2-blue.svg)
 [![David](https://img.shields.io/david/strongloop/express.svg?maxAge=2592000)](https://www.npmjs.com/package/express-decorate)
 
 # About
 
-This is a seed project that uses MongoDb, Express 4, Angular 2 (currently RC.5) and Node.js 6.2.2. It's obviously not going to be ideal for every project, but it tends to work for most of my own so I thought I'd share it with the world :) The project is also using Twitter Bootstrap SASS and browserify for builds.
+This is a seed project that uses MongoDb, Express 4, Angular 2 (currently RC.6) and Node.js 6.2.2. It's obviously not going to be ideal for every project, but it tends to work for most of my own so I thought I'd share it with the world :) The project is also using Twitter Bootstrap SASS and browserify for builds.
 
 NOTE: This project also makes use of [another library I wrote](https://github.com/mycompassspins/express-decorate), which, in short, allows you to declare routes using decorators on your controller class and methods, like this (this is also a work in progress and contributions are welcome):
 

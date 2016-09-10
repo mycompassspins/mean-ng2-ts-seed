@@ -12,5 +12,8 @@ import { Component } from '@angular/core'
 		</div>
 	`
 })
-export class ComponentLoading {}
+export class ComponentLoading
+{
+	constructor() {}
+}
 
