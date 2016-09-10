@@ -13,7 +13,7 @@ This is a seed project that uses MongoDb, Express 4, Angular 2 (currently RC.5) 
 
 NOTE: This project also makes use of [another library I wrote](https://github.com/mycompassspins/express-decorate), which, in short, allows you to declare routes using decorators on your controller class and methods, like this (this is also a work in progress and contributions are welcome):
 
-```
+```javascript
 import { Controller, GET } from 'express-decorate'
 import { Request, Response } from 'express'
 
@@ -61,19 +61,27 @@ These allow you to run `git co master` instead of `git checkout master` or `git 
 
 If you already have a local copy of the code and npm packages have been removed, it's a good idea to run
 
-`rm -rf node_modules && npm cache clean`
+```
+$ rm -rf node_modules && npm cache clean
+```
 
 Install modules
 
-`npm install`
+```
+$ npm install
+```
 
 Install typings
 
-`typings install`
+```
+$ typings install
+```
 
 You can use the project's development config file (`/src/config/environment/development.ts`), which uses a local MongoDb (MeanSeed-dev), or you can use a local configuration by adding `/src/config/environment/local.ts` and the property `use: true`
 
-`gulp serve`
+```
+$ gulp serve
+```
 
 
 # Testing:
@@ -82,7 +90,9 @@ You can use the project's development config file (`/src/config/environment/deve
 
 Run all tests:
 
-`npm test`
+```
+$ npm test
+```
 
 Run a specific spec file:
 
