@@ -4,6 +4,12 @@
 
 /// <reference path="../../interfaces/extensions/Node.d.ts" />
 
+// $log exists on NodeJs.Global, but our GlobalConfig may not have been called yet
+// Instantiate Logger here so we can use it
+// TODO: ensure GlobalConfig() fires before this file is imported
+import { Logger } from 'ts-log-debug'
+const $log = new Logger();
+
 /**
  * This file exports environment configurations based on process.env.NODE_ENV
  * TODO: should we have an interface for this type?
@@ -27,7 +33,7 @@ if (env === 'development')
 	}
 	catch(e)
 	{
-		global.$log.warn('No local config file found - using development config');
+		$log.warn('No local config file found - using development config');
 	}
 }
 

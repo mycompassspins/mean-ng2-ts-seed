@@ -6,10 +6,9 @@ module.exports = (gulp) =>
 {
 	let sourcemaps = require('gulp-sourcemaps'),
 		ts = require('gulp-typescript'),
-		runSequence = require('run-sequence'),
 		cache = require('gulp-cached');
 
-	gulp.task('build:clientTs', () =>
+	gulp.task('build:clientTsForTests', () =>
 	{
 		let tsProject = ts.createProject(gulp.clientTsConfig);
 		let tsResult = gulp.src(`${gulp.client}/**/*.ts`)
@@ -17,11 +16,11 @@ module.exports = (gulp) =>
 			.pipe(sourcemaps.init())
 			.pipe(ts(tsProject));
 		return tsResult.js
-			.pipe(sourcemaps.write())
+			.pipe(sourcemaps.write('.'))
 			.pipe(gulp.dest(`${gulp.dist}/client`))
 	});
 
-	gulp.task('build:clientTests', 'Compile specs', () =>
+	gulp.task('build:clientTests', 'Compile specs', ['build:clientTsForTests'], () =>
 	{
 		let tsProject = ts.createProject(gulp.clientTsConfig);
 		let tsResult = gulp.src(`${gulp.clientTests}/app/**/*.ts`)
@@ -31,10 +30,5 @@ module.exports = (gulp) =>
 
 		return tsResult.js
 			.pipe(gulp.dest(`${gulp.dist}/client/tests/app`))
-	});
-
-	gulp.task('build:client', (cb) =>
-	{
-		runSequence('build:clientTs', 'browserify:client', 'browserify:vendor', cb);
 	});
 };

@@ -2,7 +2,7 @@
  * Created by Justin on 9/2/16.
  */
 
-///<reference path="../../../../typings/index.d.ts" />
+///<reference path="../../interfaces/extensions/Node.d.ts" />
 
 import { Controller, GET } from 'express-decorate'
 import { Request, Response } from 'express'

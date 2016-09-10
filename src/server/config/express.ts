@@ -19,8 +19,6 @@ export function ExpressConfig():void
 
 	// Serve static files both from /src/client and /dist/client
 	app.expressApp.use(serveStatic(`${app.expressApp.get('appPath')}/client`));
-	app.expressApp.use(serveStatic(`${app.config.root}/src/client`));
-	app.expressApp.use('/node_modules', serveStatic(`${app.config.root}/node_modules`));
 
 	if (app.config.env === 'development' || app.config.env === 'test')
 	{
@@ -28,6 +26,8 @@ export function ExpressConfig():void
 
 		// Static assets for client-side unit tests
 		app.expressApp.use(serveStatic(`${app.config.root}/node_modules/jasmine-core/lib/jasmine-core`));
+		app.expressApp.use(serveStatic(`${app.config.root}/src/client`));
+		app.expressApp.use('/node_modules', serveStatic(`${app.config.root}/node_modules`));
 	}
 
 }

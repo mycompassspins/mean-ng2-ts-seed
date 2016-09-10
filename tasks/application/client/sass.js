@@ -9,6 +9,6 @@ module.exports = (gulp) =>
 	gulp.task('sass', function () {
 		return gulp.src(`${gulp.client}/app/app.scss`)
 			.pipe(sass().on('error', sass.logError))
-			.pipe(gulp.dest(`${gulp.dist}/client/app`));
+			.pipe(gulp.dest(`${gulp.dist}/client`));
 	});
 };

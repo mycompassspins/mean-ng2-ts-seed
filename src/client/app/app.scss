@@ -1,9 +1,9 @@
 // Bootstrap
-$icon-font-path: '../bower_components/bootstrap-sass/assets/fonts/bootstrap/' !default;
+$icon-font-path: 'assets/fonts' !default;
 @import '../../client/bower_components/bootstrap-sass/assets/stylesheets/bootstrap';
 
 // Font-Awesome
-$fa-font-path: '../bower_components/font-awesome/fonts' !default;
+$fa-font-path: 'assets/fonts' !default;
 @import '../../client/bower_components/font-awesome/scss/font-awesome';
 
 // Global Styles

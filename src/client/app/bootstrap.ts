@@ -14,7 +14,6 @@ import { COMPONENTS } from './components'
 import { SERVICES } from './services'
 import { ROUTES } from './config/Routes'
 import { ENV } from './config/Environment'
-import './config/Window'
 
 if (ENV === 'production') enableProdMode();
 

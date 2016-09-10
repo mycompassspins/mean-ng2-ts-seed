@@ -1,9 +1,0 @@
-/**
- * Created by Justin on 9/2/16.
- */
-"use strict";
-exports.ENV = window.location.hostname.indexOf('local') === -1 ?
-    'production' :
-    'development';
-
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC9jb25maWcvRW52aXJvbm1lbnQudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7O0dBRUc7O0FBRVUsV0FBRyxHQUFHLE1BQU0sQ0FBQyxRQUFRLENBQUMsUUFBUSxDQUFDLE9BQU8sQ0FBQyxPQUFPLENBQUMsS0FBSyxDQUFDLENBQUM7SUFDbEUsWUFBWTtJQUNaLGFBQWEsQ0FBQyIsImZpbGUiOiJhcHAvY29uZmlnL0Vudmlyb25tZW50LmpzIiwic291cmNlc0NvbnRlbnQiOlsiLyoqXG4gKiBDcmVhdGVkIGJ5IEp1c3RpbiBvbiA5LzIvMTYuXG4gKi9cblxuZXhwb3J0IGNvbnN0IEVOViA9IHdpbmRvdy5sb2NhdGlvbi5ob3N0bmFtZS5pbmRleE9mKCdsb2NhbCcpID09PSAtMSA/XG5cdCdwcm9kdWN0aW9uJyA6XG5cdCdkZXZlbG9wbWVudCc7XG4iXSwic291cmNlUm9vdCI6Ii9zb3VyY2UvIn0=

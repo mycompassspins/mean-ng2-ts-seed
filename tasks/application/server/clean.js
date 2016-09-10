@@ -8,24 +8,17 @@
  */
 module.exports = (gulp) =>
 {
-	let del = require('del'),
-		runSequence = require('run-sequence');
+	let del = require('del');
 
 	// Remove /dist directory
-	gulp.task('clean:dist', 'Clean /dist directory', () =>
+	gulp.task('clean:server', 'Clean /dist/server directory', () =>
 	{
-		return del(`${gulp.dist}/**/*`);
+		return del(`${gulp.dist}/server/**/*`);
 	});
 
 	// Clear all .spec files from dist directory
-	gulp.task('clean:test', 'Clean /server/tests directory', () =>
+	gulp.task('clean:serverTests', 'Clean /server/tests directory', () =>
 	{
-		return del(`${gulp.dist}/tests/**/`);
+		return del(`${gulp.dist}/server/tests/**/*`);
 	});
-
-	// Run above tasks in sequence
-	gulp.task('clean', 'Run clean:dist and clean:test', () =>
-	{
-		runSequence('clean:dist', 'clean:test');
-	})
 };

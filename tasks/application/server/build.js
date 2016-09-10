@@ -10,8 +10,7 @@ module.exports = (gulp) =>
 {
 	let sourcemaps = require('gulp-sourcemaps'),
 		ts = require('gulp-typescript'),
-		cache = require('gulp-cached'),
-		runSequence = require('run-sequence');
+		cache = require('gulp-cached');
 
 	gulp.task('build:server', 'Compile server-side TS code', () =>
 	{
@@ -26,7 +25,7 @@ module.exports = (gulp) =>
 			.pipe(gulp.dest('dist/server'))
 	});
 
-	gulp.task('build:test', 'Compile specs', ['build:server'], () =>
+	gulp.task('build:serverTests', 'Compile specs', ['build:server'], () =>
 	{
 		let tsProject = ts.createProject(gulp.serverTsConfig);
 		let tsResult = gulp.src(`${gulp.serverTests}/**/*`)
@@ -34,10 +33,5 @@ module.exports = (gulp) =>
 
 		return tsResult.js
 			.pipe(gulp.dest(`${gulp.dist}/server/tests`))
-	});
-
-	gulp.task('build', 'Clean /dist directory and run build:server', () =>
-	{
-		runSequence('clean', 'build:server');
 	});
 };

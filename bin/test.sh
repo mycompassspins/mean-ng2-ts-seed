@@ -18,7 +18,7 @@ if [[ ${number} -lt 1 ]] ; then
 fi
 
 # Build the app and tests
-gulp clean:test && gulp build:test
+gulp clean:serverTests && gulp build:serverTests
 
 # If no arguments were passed to this script, run all tests
 if [[ -z "$1" ]] ; then

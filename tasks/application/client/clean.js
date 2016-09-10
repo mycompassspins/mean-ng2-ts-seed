@@ -8,7 +8,12 @@ module.exports = (gulp) =>
 
 	gulp.task('clean:clientApp', () =>
 	{
-		return del(`${gulp.dist}/client/app/**/*`);
+		return del([`${gulp.dist}/client/app.js`, `${gulp.dist}/client/app.js.map`]);
+	});
+
+	gulp.task('clean:clientVendor', () =>
+	{
+		return del([`${gulp.dist}/client/vendor.js`, `${gulp.dist}/client/vendor.js.map`]);
 	});
 
 	gulp.task('clean:clientTests', () =>
