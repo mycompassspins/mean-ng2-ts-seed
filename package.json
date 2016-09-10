@@ -1,6 +1,6 @@
 {
   "name": "mean-ng2-ts-seed",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "A seed project using MongoDb, Express, Angular 2 and Node, using Gulp, tsc and Browserify for tooling/builds",
   "main": "index.js",
   "scripts": {
