@@ -5,3 +5,4 @@
 export * from './extensions/IHttpRepository'
 export * from './extensions/IRouterRepository'
 export * from './error-handling/IErrorRepository'
+export * from './IEnv'
