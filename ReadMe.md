@@ -70,6 +70,12 @@ Install modules
 $ npm install
 ```
 
+Install Bower dependencies
+
+```
+$ bower install
+```
+
 Install typings
 
 ```
