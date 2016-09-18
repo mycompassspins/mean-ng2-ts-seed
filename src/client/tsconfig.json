@@ -3,14 +3,12 @@
 		"target": "es5",
 		"module": "commonjs",
 		"moduleResolution": "node",
-		"sourceMap": true,
+		"sourceMap": false,
+		"outDir": "../../dist/client",
 		"emitDecoratorMetadata": true,
 		"experimentalDecorators": true,
 		"removeComments": false,
 		"noImplicitAny": true
 	},
-	"angularCompilerOptions": {
-		"genDir": "./ngfactory"
-	},
-	"files": []
+	"files": ["app/bootstrap.ts", "app/vendor.ts", "app/Window.ts", "tests/index.ts"]
 }

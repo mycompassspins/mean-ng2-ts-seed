@@ -4,8 +4,12 @@
 
 module.exports = (gulp) =>
 {
+	let livereload = require('gulp-livereload');
+
 	gulp.task('watch:client', 'Watch client files for changes', () =>
 	{
+		livereload.listen();
+
 		// Client Assets
 		gulp.watch(`${gulp.client}/assets/**/*`, ['imagemin']);
 
@@ -13,7 +17,7 @@ module.exports = (gulp) =>
 		gulp.watch([`${gulp.client}/**/*.html`, `${gulp.client}/favicon.ico`], ['copy']);
 
 		// Client TS files
-		gulp.watch([`${gulp.client}/app/**/*.ts`, `!${gulp.client}/app/vendor.ts`], ['clean:clientApp', 'webpack:app']);
+		gulp.watch([`${gulp.client}/**/*.ts`], ['clean:clientApp',  'build:clientTs']);
 
 		// Vendor TS Files
 		gulp.watch(`${gulp.client}/app/vendor.ts`, ['clean:clientVendor', 'webpack:vendor']);

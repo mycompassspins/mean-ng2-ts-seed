@@ -8,14 +8,15 @@ var rootDir = path.resolve();
 
 module.exports =
 {
-	entry: rootDir + "/src/client/app/vendor.ts",
+	entry: rootDir + "/dist/client/app/vendor.js",
 	output: {
-		path: rootDir + "/dist/client", publicPath: '/', filename: "vendor.js"
+		path: rootDir + "/dist/client", publicPath: '/', filename: "vendor.js",
+		pathinfo: true
 	},
-	devtool: 'source-map',
+	devtool: 'eval',
 	resolve: {
 		root: rootDir,
-		extensions: ['', '.js', '.ts']
+		extensions: ['', '.js']
 	},
 	module: {
 		loaders: [

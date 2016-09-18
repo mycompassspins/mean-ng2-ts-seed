@@ -9,14 +9,15 @@ var rootDir = path.resolve();
 module.exports =
 {
 	target: 'node',
-	entry: rootDir + "/src/client/app/bootstrap.ts",
+	entry: rootDir + "/dist/client/app/bootstrap.js",
 	output: {
-		path: rootDir + "/dist/client", publicPath: '/', filename: "app.js"
+		path: rootDir + "/dist/client", publicPath: '/', filename: "app.js",
+		pathinfo: true
 	},
-	devtool: 'source-map',
+	devtool: 'eval',
 	resolve: {
-		root: rootDir + "/src/client/app",
-		extensions: ['', '.js', '.ts']
+		root: rootDir + "/dist/client/app",
+		extensions: ['', '.js']
 	},
 	// This turns the app on in production mode
 	// plugins: [

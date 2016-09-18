@@ -12,6 +12,6 @@ module.exports = (gulp) =>
 		{
 			gulp.src(__filename)
 				.pipe(open({uri: 'http://localhost:3000'}));
-		}, 500);
+		}, 1200);
 	});
 };

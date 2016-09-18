@@ -4,16 +4,22 @@
 
 module.exports = (gulp) =>
 {
-	let webpack = require('webpack');
+	let webpack = require('webpack'),
+		livereload = require('gulp-livereload'),
+		statsOptions = {
+			chunks: false, // Makes the build much quieter
+			colors: true
+		};
 
 	gulp.task('webpack:app', (cb) =>
 	{
 		return webpack(require('../../../webpack/webpack.config.js'), (err, stats) =>
 		{
 			if(err) throw err;
-			console.log("[webpack]", stats.toString({
-				// output options
-			}));
+			console.log("[webpack]", stats.toString(statsOptions));
+
+			gulp.src(`${gulp.dist}/client/app.js`).pipe(livereload());
+
 			cb();
 		});
 	});
@@ -23,9 +29,7 @@ module.exports = (gulp) =>
 		return webpack(require('../../../webpack/webpack.vendor.config.js'), (err, stats) =>
 		{
 			if(err) throw err;
-			console.log("[webpack]", stats.toString({
-				// output options
-			}));
+			console.log("[webpack]", stats.toString(statsOptions));
 			cb();
 		});
 	});
@@ -35,9 +39,7 @@ module.exports = (gulp) =>
 		return webpack(require('../../../webpack/webpack.tests.config.js'), (err, stats) =>
 		{
 			if(err) throw err;
-			console.log("[webpack]", stats.toString({
-				// output options
-			}));
+			console.log("[webpack]", stats.toString(statsOptions));
 			cb();
 		});
 	});

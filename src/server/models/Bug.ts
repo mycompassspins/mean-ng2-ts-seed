@@ -3,13 +3,13 @@
  */
 
 import { IBug } from '../interfaces'
-import mongoose = require('mongoose');
+import { Schema, model, Model } from 'mongoose'
 
-let bugSchema = new mongoose.Schema({
+let bugSchema = new Schema({
 	controller: { type: String },
 	method: { type: String },
 	stack: { type: Object },
 	date: { type: Date, "default": Date.now }
 });
 
-export const Bug = mongoose.model<IBug>('Bug', bugSchema);
+export const Bug:Model<IBug> = model<IBug>('Bug', bugSchema);

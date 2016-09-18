@@ -5,30 +5,23 @@
 module.exports = (gulp) =>
 {
 	let sourcemaps = require('gulp-sourcemaps'),
-		ts = require('gulp-typescript'),
-		cache = require('gulp-cached');
+		exec = require('child_process').exec,
+		runSequence = require('run-sequence'),
+		chalk = require('chalk');
 
-	gulp.task('build:clientTsForTests', () =>
+	gulp.task('build:clientTs', (cb) =>
 	{
-		let tsProject = ts.createProject(gulp.clientTsConfig);
-		let tsResult = gulp.src(`${gulp.client}/**/*.ts`)
-			.pipe(cache('ClientBuild'))
-			.pipe(sourcemaps.init())
-			.pipe(ts(tsProject));
-		return tsResult.js
-			.pipe(sourcemaps.write('.'))
-			.pipe(gulp.dest(`${gulp.dist}/client`))
-	});
+		exec('tsc --version', (err, stdout, stderr) =>
+		{
+			console.log(chalk.green("Typescript " + stdout));
+		});
 
-	gulp.task('build:clientTests', 'Compile specs', ['build:clientTsForTests'], () =>
-	{
-		let tsProject = ts.createProject(gulp.clientTsConfig);
-		let tsResult = gulp.src(`${gulp.clientTests}/app/**/*.ts`)
-			.pipe(cache('ClientTestBuild'))
-			.pipe(sourcemaps.init())
-			.pipe(ts(tsProject));
-
-		return tsResult.js
-			.pipe(gulp.dest(`${gulp.dist}/client/tests/app`))
+		return exec('tsc -p src/client', (err, stdout, stderr) =>
+		{
+			if (err) console.log(stderr);
+			console.log(chalk.green("Done Compiling TS " + stdout));
+			runSequence('webpack:app');
+			cb(err);
+		})
 	});
 };

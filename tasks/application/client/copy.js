@@ -4,17 +4,19 @@
 
 module.exports = (gulp) =>
 {
-	let runSequence = require('run-sequence');
+	let runSequence = require('run-sequence'),
+		livereload = require('gulp-livereload');
 
 	gulp.task('copy:index', () =>
 	{
-		return gulp.src([`${gulp.client}/index.html`, `${gulp.client}/favicon.ico`])
+		return gulp.src([`${gulp.client}/index.html`, `${gulp.client}/favicon.png`])
 			.pipe(gulp.dest(`${gulp.dist}/client`));
 	});
 
 	gulp.task('copy:html', () =>
 	{
 		return gulp.src(`${gulp.client}/app/**/*.html`)
+			.pipe(livereload())
 			.pipe(gulp.dest(`${gulp.dist}/client/app`));
 	});
 

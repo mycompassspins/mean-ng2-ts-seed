@@ -17,7 +17,7 @@ export class BugLogger
 	public static async Log(e:any, controller:string, method:string, logMessage?:string):Promise<any>
 	{
 		let err:IErrorObject = ErrorHandler.ConstructError(e);
-		let bug:IBug = {
+		let bug:any = {
 			controller: controller || 'Unknown',
 			method: method || 'Unknown',
 			date: new Date(),

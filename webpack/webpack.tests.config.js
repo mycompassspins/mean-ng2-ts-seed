@@ -9,11 +9,10 @@ var rootDir = path.resolve();
 module.exports =
 {
 	externals: ['@angular'], // in order to ignore all modules in node_modules folder
-	entry: rootDir + "/src/client/tests/index.ts",
+	entry: rootDir + "/dist/client/tests/index.js",
 	output: {
 		path: rootDir + "/dist/client/tests", publicPath: '/', filename: "TestsBundle.js"
 	},
-	devtool: 'source-map',
 	resolve: {
 		root: rootDir + "/src/client/tests",
 		extensions: ['', '.js', '.ts']
