@@ -1,9 +1,9 @@
 language: node_js
 node_js:
- - '6'
+ - '7'
 
 before_install:
-  - npm install -g gulp
+  - npm install -g gulp && npm install -g typescript@next
 
 script:
   - "mkdir dist && sudo chmod +x dist/ && gulp build:all && npm run-script travis"
