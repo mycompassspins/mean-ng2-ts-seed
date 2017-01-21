@@ -5,7 +5,5 @@
 import 'reflect-metadata';
 import './Window';
 
-declare var require:any;
-
 require('zone.js');
 require('bootstrap');

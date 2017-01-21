@@ -8,5 +8,4 @@ interface Window
 	jQuery:Function;
 }
 
-declare var require:any;
 window.$ = window.jQuery = require('jquery');

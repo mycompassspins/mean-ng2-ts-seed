@@ -8,7 +8,14 @@ module.exports = (gulp) =>
 
 	gulp.task('build:all', 'Clean /dist directory and run build:server', (cb) =>
 	{
-		runSequence('clean', 'build:server', 'build:serverTests', 'build:clientTs', 'webpack:app', 'webpack:vendor', 'webpack:tests',
-			'sass', 'inject:sassImports', 'copy', 'imagemin', cb);
+		runSequence('clean', 'build:server', 'copy:mailTemplates', 'build:clientTs',
+			'webpack:app', 'webpack:vendor', 'ejs:indexDev', 'sass', 'inject:sassImports', 'copy',
+			'imagemin', cb);
 	});
+
+	gulp.task('build:prod', 'Build app for production', (cb) =>
+	{
+		runSequence('clean:prod', 'build:server', 'copy:mailTemplates', 'build:clientTs', 'webpack:app', 'webpack:prod', 'webpack:vendor',
+			'webpack:vendorProd', 'ejs:indexProd', 'sass', 'inject:sassImports', 'imagemin', 'cssmin', 'copy', 'clean:prod', cb);
+	})
 };

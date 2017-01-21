@@ -2,13 +2,10 @@
 
 [![Build Status](https://travis-ci.org/mycompassspins/mean-ng2-ts-seed.svg?branch=master)](https://travis-ci.org/mycompassspins/mean-ng2-ts-seed)
 [![Coverage Status](https://coveralls.io/repos/github/mycompassspins/mean-ng2-ts-seed/badge.svg)](https://coveralls.io/github/mycompassspins/mean-ng2-ts-seed)
-[![TypeScript](https://img.shields.io/badge/TypeScript-v2.0-blue.svg)](https://img.shields.io/badge/TypeScript-v2.0-blue.svg)
-[![Node Version](https://img.shields.io/badge/node-6.2.2-blue.svg)](https://img.shields.io/badge/node-6.2.2-blue.svg)
-[![David](https://img.shields.io/david/strongloop/express.svg?maxAge=2592000)](https://www.npmjs.com/package/express-decorate)
 
 # About
 
-This is a seed project that uses MongoDb, Express 4, Angular 2.0.0 and Node.js 6.2.2. It's obviously not going to be ideal for every project, but it tends to work for most of my own so I thought I'd share it with the world :) The project is also using Twitter Bootstrap SASS and Webpack for builds.
+This is a seed project that uses MongoDb, Express 4 and Angular 2.x.x. It's obviously not going to be ideal for every project, but it tends to work for most of my own so I thought I'd share it with the world :) The project is also using Twitter Bootstrap SASS and Webpack for builds.
 
 NOTE: This project also makes use of [another library I wrote](https://github.com/mycompassspins/express-decorate), which, in short, allows you to declare routes using decorators on your controller class and methods, like this (this is also a work in progress and contributions are welcome):
 
@@ -35,8 +32,8 @@ I welcome contributions provided any pull requests submitted conform to existing
 
 # Prerequisites:
 
-- Node.js 6.2.2
-- npm 3.9.5
+- Node.js >=6.2.2
+- npm >-3.9.5
 - MongoDb - https://docs.mongodb.com/manual/installation/
 - Nodemon - `$ npm install -g nodemon`
 - Gulp - `$ npm install -g gulp`
@@ -76,12 +73,6 @@ Install Bower dependencies
 $ bower install
 ```
 
-Install typings
-
-```
-$ typings install
-```
-
 You can use the project's development config file (`/src/config/environment/development.ts`), which uses a local MongoDb (MeanSeed-dev), or you can use a local configuration by adding `/src/config/environment/local.ts` and the property `use: true`
 
 ```
@@ -103,8 +94,4 @@ Run a specific spec file:
 
 (note: do not use file extension) `npm test Application` or `npm test helpers/FileSystemHelper`
 
-### Client:
-
-Simply navigate to http://localhost:3000/client-tests to run all specs
-
-To run a specific spec: http://localhost:3000/client-tests?spec=SpecName (no extension needed)
+### TODO: client tests

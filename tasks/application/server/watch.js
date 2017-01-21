@@ -10,6 +10,6 @@ module.exports = (gulp) =>
 {
 	gulp.task('watch:server', 'Watch project files for changes', () =>
 	{
-		gulp.watch([`${gulp.server}/**/*.ts`, `!${gulp.serverTests}/**/*`], ['build:server']);
+		gulp.watch([`${gulp.server}/templates/**/*`], ['copy:mailTemplates']);
 	});
 };

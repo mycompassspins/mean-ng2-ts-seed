@@ -2,8 +2,6 @@
  * Created by Justin on 9/10/16.
  */
 
-/// <reference path="../../../typings/index.d.ts" />
-
 let chalk = require('chalk');
 
 class Logger

@@ -34,9 +34,19 @@ module.exports = (gulp) =>
 		});
 	});
 
-	gulp.task('webpack:tests', (cb) =>
+	gulp.task('webpack:prod', (cb) =>
 	{
-		return webpack(require('../../../webpack/webpack.tests.config.js'), (err, stats) =>
+		return webpack(require('../../../webpack/webpack.prod.config.js'), (err, stats) =>
+		{
+			if(err) throw err;
+			console.log("[webpack]", stats.toString(statsOptions));
+			cb();
+		});
+	});
+
+	gulp.task('webpack:vendorProd', (cb) =>
+	{
+		return webpack(require('../../../webpack/webpack.prod.vendor.config.js'), (err, stats) =>
 		{
 			if(err) throw err;
 			console.log("[webpack]", stats.toString(statsOptions));

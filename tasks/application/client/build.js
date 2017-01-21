@@ -6,8 +6,8 @@ module.exports = (gulp) =>
 {
 	let sourcemaps = require('gulp-sourcemaps'),
 		exec = require('child_process').exec,
-		runSequence = require('run-sequence'),
-		chalk = require('chalk');
+		chalk = require('chalk'),
+		runSequence = require('run-sequence');
 
 	gulp.task('build:clientTs', (cb) =>
 	{
@@ -21,7 +21,7 @@ module.exports = (gulp) =>
 			if (err) console.log(stderr);
 			console.log(chalk.green("Done Compiling TS " + stdout));
 			runSequence('webpack:app');
-			cb(err);
+			cb();
 		})
 	});
 };

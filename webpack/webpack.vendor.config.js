@@ -8,6 +8,7 @@ var rootDir = path.resolve();
 
 module.exports =
 {
+	target: 'web',
 	entry: rootDir + "/dist/client/app/vendor.js",
 	output: {
 		path: rootDir + "/dist/client", publicPath: '/', filename: "vendor.js",
@@ -17,13 +18,6 @@ module.exports =
 	resolve: {
 		root: rootDir,
 		extensions: ['', '.js']
-	},
-	module: {
-		loaders: [
-			{
-				test: /\.ts/, loaders: ['ts-loader'], exclude: /node_modules/
-			}
-		]
 	}
 };
 

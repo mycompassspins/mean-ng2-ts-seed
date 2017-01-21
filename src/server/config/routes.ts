@@ -14,15 +14,6 @@ export function RouteConfig(app:express.Application):void
 	app.route(CONFIG.angularRoutes)
 		.get((req:Request, res:Response, next:NextFunction) =>
 		{
-			return res.sendFile(`${CONFIG.root}/src/client/index.html`);
+			return res.sendFile(`${app.get('appPath')}/client/index.html`);
 		});
-
-	// Configure route for client-side unit tests if we're not in production
-	if (CONFIG.env === 'development' || CONFIG.env === 'test')
-	{
-		app.get('/client-tests', (req:Request, res:Response, next:NextFunction) =>
-		{
-			return res.sendFile(`${CONFIG.root}/src/client/tests/unit-tests.html`);
-		})
-	}
 }

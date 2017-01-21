@@ -1,3 +1,5 @@
+<% var isProd = locals.env === 'production'; %>
+
 <html>
 
 	<head>
@@ -5,7 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<base href="/">
 		<link rel="shortcut icon" href="favicon.ico">
-		<link rel="stylesheet" href="app.css">
+		<link rel="stylesheet" href="app<%= isProd ? '.min' : '' %>.css">
   	</head>
 
 	<body>
@@ -17,8 +19,12 @@
 		</application>
 
 		<!-- Script Bundles -->
-		<script src="vendor.js"></script>
-		<script src="app.js"></script>
+		<% if (!isProd) { %>
+			<script src="//localhost:35729/livereload.js"></script>
+		<% } %>
+
+		<script src="vendor<%= isProd ? '.min' : '' %>.js"></script>
+		<script src="app<%= isProd ? '.min' : '' %>.js"></script>
 
 		<!-- Close bootstrap mobile nav on click -->
 		<script>

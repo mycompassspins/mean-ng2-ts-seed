@@ -9,7 +9,8 @@ module.exports = (gulp) =>
 
 	gulp.task('copy:index', () =>
 	{
-		return gulp.src([`${gulp.client}/index.html`, `${gulp.client}/favicon.png`])
+		return gulp.src([`${gulp.client}/index.html`, `${gulp.client}/*.xml`, `${gulp.client}/robots.txt`,
+			`${gulp.client}/favicon.ico`])
 			.pipe(gulp.dest(`${gulp.dist}/client`));
 	});
 
@@ -22,12 +23,19 @@ module.exports = (gulp) =>
 
 	gulp.task('copy:fonts', () =>
 	{
-		gulp.src(`${gulp.client}/bower_components/bootstrap-sass/assets/fonts/bootstrap/**/*`)
+		gulp.src([`${gulp.client}/bower_components/bootstrap-sass/assets/fonts/bootstrap/**/*`,
+			`${gulp.client}/assets/fonts/**/*`])
 			.pipe(gulp.dest(`${gulp.dist}/client/assets/fonts`));
 
 		return gulp.src(`${gulp.client}/bower_components/font-awesome/fonts/**/*`)
 			.pipe(gulp.dest(`${gulp.dist}/client/assets/fonts`));
 	});
 
-	gulp.task('copy', () => runSequence('copy:index', 'copy:html', 'copy:fonts'));
+	gulp.task('copy:libs', () =>
+	{
+		return gulp.src([`${gulp.client}/assets/ajs/**/*`, `${gulp.client}/assets/unit-gallery/**/*`])
+			.pipe(gulp.dest(`${gulp.dist}/client/assets/ajs`));
+	});
+
+	gulp.task('copy', () => runSequence('copy:index', 'copy:html', 'copy:fonts', 'copy:libs'));
 };

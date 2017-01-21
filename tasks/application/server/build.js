@@ -9,29 +9,27 @@
 module.exports = (gulp) =>
 {
 	let sourcemaps = require('gulp-sourcemaps'),
-		ts = require('gulp-typescript'),
-		cache = require('gulp-cached');
+		exec = require('child_process').exec,
+		chalk = require('chalk');
 
-	gulp.task('build:server', 'Compile server-side TS code', () =>
+	gulp.task('build:server', 'Compile server-side TS', (cb) =>
 	{
-		let tsProject = ts.createProject(gulp.serverTsConfig);
-		let tsResult = gulp.src([`${gulp.server}/**/*.ts`, `!${gulp.serverTests}/**/*`])
-			.pipe(cache('ServerBuild'))
-			.pipe(sourcemaps.init())
-			.pipe(ts(tsProject));
+		exec('tsc --version', (err, stdout, stderr) =>
+		{
+			console.log(chalk.green("Typescript " + stdout));
+		});
 
-		return tsResult.js
-			.pipe(sourcemaps.write())
-			.pipe(gulp.dest('dist/server'))
+		return exec('tsc -p src/server', (err, stdout, stderr) =>
+		{
+			if (err) console.log(stderr);
+			console.log(chalk.green("Done Compiling TS " + stdout));
+			cb(err);
+		})
 	});
 
-	gulp.task('build:serverTests', 'Compile specs', ['build:server'], () =>
+	gulp.task('copy:mailTemplates', 'copy mail templates directory to dist', () =>
 	{
-		let tsProject = ts.createProject(gulp.serverTsConfig);
-		let tsResult = gulp.src(`${gulp.serverTests}/**/*`)
-			.pipe(ts(tsProject));
-
-		return tsResult.js
-			.pipe(gulp.dest(`${gulp.dist}/server/tests`))
-	});
+		return gulp.src(`${gulp.server}/templates/**/*`)
+			.pipe(gulp.dest(`${gulp.dist}/server/templates`));
+	})
 };

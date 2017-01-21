@@ -2,8 +2,6 @@
  * Created by Justin on 9/2/16.
  */
 
-///<reference path="../../../../typings/index.d.ts" />
-
 process.env.NODE_ENV = 'test';
 import { IErrorObject } from '../../interfaces'
 import { Bug } from '../../models'

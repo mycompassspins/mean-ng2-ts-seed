@@ -2,8 +2,6 @@
  * Created by Justin on 9/2/16.
  */
 
-/// <reference path="../../../../typings/index.d.ts" />
-
 import { Document } from 'mongoose'
 
 /**

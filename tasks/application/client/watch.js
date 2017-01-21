@@ -16,6 +16,9 @@ module.exports = (gulp) =>
 		// Client index and favicon
 		gulp.watch([`${gulp.client}/**/*.html`, `${gulp.client}/favicon.ico`], ['copy']);
 
+		// Client EJS
+		gulp.watch([`${gulp.client}/index.ejs`], ['ejs:indexDev']);
+
 		// Client TS files
 		gulp.watch([`${gulp.client}/**/*.ts`], ['clean:clientApp',  'build:clientTs']);
 
@@ -23,7 +26,7 @@ module.exports = (gulp) =>
 		gulp.watch(`${gulp.client}/app/vendor.ts`, ['clean:clientVendor', 'webpack:vendor']);
 
 		// Client spec files
-		gulp.watch(`${gulp.clientTests}/**/*.ts`, ['clean:clientTests', 'sass', 'inject:sassImports', 'webpack:tests']);
+		gulp.watch(`${gulp.clientTests}/**/*.ts`, ['clean:clientApp',  'build:clientTs', 'sass', 'inject:sassImports']);
 
 		// .scss files
 		gulp.watch(`${gulp.client}/**/*.scss`, ['sass', 'inject:sassImports']);

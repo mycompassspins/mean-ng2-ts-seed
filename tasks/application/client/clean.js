@@ -15,9 +15,4 @@ module.exports = (gulp) =>
 	{
 		return del([`${gulp.dist}/client/vendor.js`, `${gulp.dist}/client/vendor.js.map`]);
 	});
-
-	gulp.task('clean:clientTests', () =>
-	{
-		return del(`${gulp.dist}/client/tests/**/*`);
-	});
 };
